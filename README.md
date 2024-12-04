@@ -2,7 +2,7 @@
 A webfejlesztés tárgy beadandója
 
 Készítette: Vigh Rebeka
-GitHub:
+GitHub:https://reboovigh.github.io/webfejlesztes/index.html
 
 Az oldal témája a fastpitch softball, ami egy nagyon kevéssé ismert sport Magyarországon, a baseball közeli rokona. Az oldal tartalmazza a sport ismertetését, röviden a szabályokat, a legismertebb csapatokat, illetve egy jelentkezési lapot.
 
