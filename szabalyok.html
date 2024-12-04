@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="Kepek/favicon-16x16.png">
     <title>Softball</title>
-    <script>
+     <script>
         function battingaverage() {
             const ab = parseFloat(document.getElementById("atbat").value);
             const h = parseFloat(document.getElementById("hit").value);
@@ -19,12 +19,14 @@
 
             onclick
             if (avg >= 0.5) {
-                alert(`Az igen! Ilyen ütőátlaggal biztos te vagy az MVP!`);
+                alert(`${avg.toFixed(3)}, az igen! Ilyen ütőátlaggal biztos te vagy az MVP!`);
                 document.getElementById("mvp").style.display = "block"
             } else if (avg >= 0.3) {
-                alert(`Te egy nagyon jó ütő vagy!`);
+                alert(`${avg.toFixed(3)} ütőátlaggal te egy nagyon jó ütő vagy!`);
+                  document.getElementById("mvp").style.display = "none"
             } else {
-                alert(`Sajnálom, de több edzésre van szükséged!`);
+                alert(`${avg.toFixed(3)}? Sajnálom, de több edzésre van szükséged!`);
+                  document.getElementById("mvp").style.display = "none"
             }
         };
     </script>
@@ -56,7 +58,7 @@
                     érvénytelen terület (foul territory) található. Az infield közepén a dobókör (pitching circle)
                     helyezkedik el, a játék egészen addig áll, amíg a labda ezen a körön belül a dobó kezében van. A
                     játék a hazai bázistól (home plate) indul, a szabványos pályahossz a home plate-től a pálya végét
-                    jelentő kerítésig méter. A kerítés lehet fal vagy annak hiányában kb. 1-1,5 méter magas háló is.
+                    jelentő kerítésig kb. 67 méter (220 láb). A kerítés lehet fal vagy annak hiányában kb. 1-1,5 méter magas háló is.
                     <br><br> <img src="Kepek/palya.jpg" alt="Egy softball pálya felülnézetből" class="kep"></p><br><br>
             </article>
         </div>
