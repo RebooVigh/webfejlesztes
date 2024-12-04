@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alapvető tudnivalók a softball sportágról.">
+    <meta name="author" content="Vigh Rebeka">
+    <meta name="copyright" content="Vigh Rebeka">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="Kepek/favicon-16x16.png">
+
+    <script src="Validalas/jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <title>Softball</title>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    nev: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    telszam: {
+                        required: true,
+                        digits: true
+                    },
+                    szulido: {
+                        required: true,
+                        dateISO: true
+                    },
+                    nem: "required",
+                    varos: { required: true },
+                    edzettseg: {
+                        required: true,
+                        range: [1, 100]
+                    }
+                },
+                messages: {
+                    nev: "Kérlek add meg a teljes neved!",
+                    email: {
+                        required: "Kérlek add meg az email címedet!",
+                        email: "Létező emailcímet adj meg!",
+                    },
+                    telszam: {
+                        required: "Kérlek add meg a telefonszámodat!",
+                        digits: "A telefonszám csak számokat tartalmazhat!",
+                    },
+                    szulido: {
+                        required: "Kérlek add meg a születési dátumodat!",
+                        dateISO: "Helytelen formátum!",
+                    },
+                    nem: "Kérlek válasszd ki a nemedet!",
+                    varos: "Kérlek add meg a várost, ahol laksz!",
+                    edzettseg: { required: "Kérlek, jellemezd az edzettségi állapotodat!" },
+                }
+            });
+        });
+    </script>
+
+    <style>
+        label.error {
+            color: #FB3A3A;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <hr>
+        <h1>Softball</h1>
+        <h2>Olyan, mint a baseball, csak sokkal jobb!</h2><br>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="szabalyok.html">Szabályok</a></li>
+            <li><a href="csapatok.html">Híres csapatok</a></li>
+            <li><a href="jelentkezz.html" class="active">Próbáld ki te is!</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <article class="jelentkezes">
+        <h1>Jelentkezési lap</h1><br>
+        <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="myform" novalidate>
+            <label for="nev">Név: </label><input type="text" name="nev" id="nev"> <br>
+            <label for="email">Email-cím</label><input type="email" name="email" id="email"> <br>
+            <label for="telszam">Telefonszám: </label><input type="tel" name="telszam" placeholder="+36" id="telszam">
+            <br>
+            <label for="szulido">Születési idő: </label><input type="date" name="szulido" id="szulido"> <br>
+            <label for="nem">Nem: </label><select name="nem" id="nem">
+                <option value=""></option>
+                <option value="ferfi">Férfi</option>
+                <option value="no">Nő</option>
+                <option value="egyeb">Egyéb</option>
+            </select><br>
+            <label for="varos"></label>Város: <input type="text" name="varos" id="varos" placeholder="Budapest"> <br>
+            <label for="tapasztalat">Van baseball/softball tapasztalatod? </label><br>
+            <input type="radio" name="tapasztalat1" id="tapasztalat" value="Igen">Igen<br>
+            <input type="radio" name="tapasztalat0" id="tapasztalat" value="Nem">Nem<br>
+
+            <label for="pozicio"></label>Ha igen, milyen pozíció(k)on/Ha nem, milyen pozíción játszanál szívesen?<br>
+            <label for="p">Dobó</label>&nbsp;<input type="checkbox" name="pozicio[]" value="pozicio1" id="p"><br>
+            <label for="c">Fogó</label>&nbsp;<input type="checkbox" name="pozicio[]" value="pozicio2" id="c"><br>
+            <label for="1b">Egyes védő</label>&nbsp;<input type="checkbox" name="pozicio[]" value="pozicio3" id="1b"><br>
+            <label for="2b">Kettes védő</label>&nbsp;<input type="checkbox" name="pozicio[]" value="pozicio4" id="2b"><br>
+            <label for="3b">Hármas védő</label>&nbsp;<input type="checkbox" name="pozicio[]" value="pozicio5" id="3b"><br>
+            <label for="ss">Shortstop</label>&nbsp;<input type="checkbox" name="pozicio[]" value="pozicio6" id="ss"> <br>
+            <label for="lf">Balkülső</label>&nbsp;<input type="checkbox" name="pozicio[]" value="pozicio7" id="lf"> <br>
+            <label for="cf">Középkülső</label>&nbsp;<input type="checkbox" name="pozicio[]" value="pozicio8" id="cf"> <br>
+            <label for="rf">Jobbkülső</label>&nbsp;<input type="checkbox" name="pozicio[]" value="pozicio9" id="rf"> <br>
+            <label for="edzettseg">Edzettségi állapotod: </label><input type="range" min="1" max="100" name="edzettseg"
+                id="edzettseg"> <br>
+            <input type="submit" name="submit" value="Jelentkezem!">
+            <input type="reset" name="reset" id="Visszaállítás">
+        </form>
+
+    </article>
+    <footer>Ez a weboldal a Budapesti Corvinus Egyetem "Informatika és IT architektúra alapjai" nevű kurzusára készült. <br>Vigh Rebeka, 2024</footer>
+
+
+</body>
+
+</html>

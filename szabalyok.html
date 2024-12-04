@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alapvető tudnivalók a softball sportágról.">
+    <meta name="author" content="Vigh Rebeka">
+    <meta name="copyright" content="Vigh Rebeka">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="Kepek/favicon-16x16.png">
+    <title>Softball</title>
+    <script>
+        function battingaverage() {
+            const ab = parseFloat(document.getElementById("atbat").value);
+            const h = parseFloat(document.getElementById("hit").value);
+            const avg = h / ab;
+
+            onclick
+            if (avg >= 0.5) {
+                alert(`Az igen! Ilyen ütőátlaggal biztos te vagy az MVP!`);
+                document.getElementById("mvp").style.display = "block"
+            } else if (avg >= 0.3) {
+                alert(`Te egy nagyon jó ütő vagy!`);
+            } else {
+                alert(`Sajnálom, de több edzésre van szükséged!`);
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <hr>
+        <h1>Softball</h1>
+        <h2>Olyan, mint a baseball, csak sokkal jobb!</h2><br>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="szabalyok.html" class="active">Szabályok</a></li>
+            <li><a href="csapatok.html">Híres csapatok</a></li>
+            <li><a href="jelentkezz.html">Próbáld ki te is!</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <div class="container">
+        <div class="szabalyok">
+            <article>
+                <h1>A softball pálya felépítése</h1>
+                <p>A softball pálya alapvetően két részre osztható. Az egyik a salakkal borított infield (belső mező), a
+                    másik a fűvel fedett outfield (külső mező). A bázisok az infielden egymástól kb. 20 méterre (60 láb)
+                    találhatóak, ezeket kell a játék során a támadóknak elfoglalni, "megszerezni", a védekező csapat
+                    célja pedig értelemszerűen ennek megakadályozása. A fehér vonalakon kívül a játék szempontjából
+                    érvénytelen terület (foul territory) található. Az infield közepén a dobókör (pitching circle)
+                    helyezkedik el, a játék egészen addig áll, amíg a labda ezen a körön belül a dobó kezében van. A
+                    játék a hazai bázistól (home plate) indul, a szabványos pályahossz a home plate-től a pálya végét
+                    jelentő kerítésig méter. A kerítés lehet fal vagy annak hiányában kb. 1-1,5 méter magas háló is.
+                    <br><br> <img src="Kepek/palya.jpg" alt="Egy softball pálya felülnézetből" class="kep"></p><br><br>
+            </article>
+        </div>
+        <div class="szabalyok">
+            <article>
+                <h1>A csapatok</h1>
+                <p>A gyakori tévhittel ellentétben a softball (és a baseball) csapat nem "dobókból" és "ütőkből" áll -
+                    mind a két csapat felváltva üt (támad) és védekezik. Védekezéskor egyszerre kilenc ember lehet a
+                    pályán: négy infielder, három outfielder, a dobó (pitcher) és a fogó (catcher). Az infielderek közül
+                    az egyes védő (first baseman, rövidítve 1B) védi az egyes, a hármas védő (third baseman, 3B) pedig a
+                    hármas bázist védi. A kettes bázist két oldalról a kettes védő (second baseman, 2B) és a shortstop
+                    (SS) védik. Az outfieldet három játékos biztosítja: balról jobba haladva a bal-, közép-, illetve
+                    jobbkülső védő (left-, center- és rightfielder, LF, CF és RF). <br><br>
+                    A dobó és a fogó speciális szerepet töltenek be a csapatban. A dobó birtokolja a labdát és így ő
+                    kontrollálja a játék folyamatát. A fogó, amellett, hogy a hazai bázist védi és a dobó által dobott
+                    labdát elkapja, utasításokat ad a többi játékosnak pl. helyezkedés szempontjából. <br><br>
+                    Ütésnél ugyanaz a kilenc játékos egy megadott sorrendben (batting order) egymás után áll a home
+                    plate-hez, hogy az ellenfél dobója által dobott labdát minél messzebbre üsse. Egyes esetekben egy
+                    tizedik játékos is szerepelhet a csapatban, ő a DP (designated player), aki egy védekező játékos
+                    helyett üt, aki cserébe védekezik helyette - ezt a védekező játékost Flexnek nevezik. <br><br>
+                    <img src="Kepek/csapat.jpg" class="kep" alt="Egy softball csapat három játékosa pacsizik egymással">
+                </p>
+            </article>
+        </div>
+        <div class="container">
+            <article class="jatek">
+                <h1>A játék menete</h1>
+                <p>Egy softball mérkózés hét játékrészből (inning) áll. Ezeknek nincs időkorlátjuk, egy fél inning addig
+                    tart, ameddig a védekező csapat ki nem ejti a támadó csapat három játékosát (három outot szerez),
+                    egy teljes inning pedig akkor megy le, amikor mindkét csapat támadott (ütött). Pontot szerezni úgy
+                    lehet, hogy egy játékos a hazai bázistól indulva sorban egymás után "elfoglalja" az összes bázist és
+                    visszaér a hazai bázisra. Az, hogy hány bázist haladhat, az ütés nagyságától és a védekező csapat
+                    játékától függ. Akár egyetlen ütésből is lehetséges pontot szerezni, ezt nevezzük home runnak
+                    (hazafutás). Az első támadás joga mindig a vendég csapaté. Out szerzésére négy mód létezik: <br><br>
+                <table>
+                    <tr>
+                        <td class="cimsor">Kiejtés módja</td>
+                        <td class="cimsor">Mikor érvényes</td>
+                        <td class="cimsor">Megnevezés</td>
+                    </tr>
+                    <tr>
+                        <td>Ha az ütő nem képes elütni olyan dobást, amelyek a meghatározott "strike zónába" érkeznek,
+                            vagy pedig olyan labdát kísérel meg elütni, amely nincs ebben a zónában, azt strike-nak
+                            nevezzük és ha három ilyet "összegyűjt", kiesik. Az hogy egy dobás benne van-e a zónában, a
+                            fogó mögött álló bíró (umpire) ítéli meg.
+                        <td>Amennyiben az ütő már rendelkezik két strike-al és a következő dobást érvénytelen területre
+                            üti, az nem minősül strikenak (egyébként igen). A harmadik strike nem érvényes, ha a fogó
+                            nem tudja stabilan a kesztyűjében tartani a labdát, ilyenkor a futó megpróbálhatja
+                            megszerezni az első bázist.</td>
+                        <td class="out">STIRIKEOUT</td>
+                    </tr>
+                    <tr>
+                        <td>Ha az ütő érvényes játékterületre juttatta a labdát, a védők feladata, hogy eljuttassák a
+                            labdát az egyes védő kezébe még azelőtt, hogy az ütő elérne oda. Azt, hogy a labda vagy a
+                            futó ért oda a bázisra előbb, egy másik bíró, a base umpire itéli meg. </td>
+                        <td>Az egyes bázison mindig, de más bázisokon is lehetséges ilyen módon outot szerezni,
+                            amennyiben a bázis mögötti többi bázison is futó tartózkodik, tehát a játékos mögött futók
+                            "tolják" - egy bázison nem tartózkodhat két ember egyszerre, amennyiben ütés történik, a már
+                            bázison lévő játékosoknak muszáj tovább futniuk a következő bázis felé.</td>
+                        <td class="out">FORCEOUT</td>
+                    </tr>
+                    <tr>
+                        <td>Ha egy olyan futót akarnak a védők kiejteni, aki már az ütés előtt a bázison tartózkodott,
+                            de nem áll fent a már említett "tolás" esete, a kesztyűjükben lévő labdával meg kell
+                            érinteniük (tag) a futó játékost egy olyan pillanatban, amikor éppen egyik testrészével sem
+                            tartózkodik a bázison.
+                        <td>Ha a védekező játékos megtartja a labdát az érintkezés után (tehát nem ejti el pl. ütközés
+                            következtében), és a bíró nem ítéli úgy, hogy a védő részéről a futó mozgásának akadályozása
+                            történt, a tag érvényes. </td>
+                        <td class="out">TAGOUT</td>
+                    </tr>
+                    <tr>
+                        <td>Ha egy ütött labda a levegőben száll, és egy védekező játékos, általában egy outfielder,
+                            elkapja mielőtt leesne, az azt ütött játékos automatikusan kiesik, a futóknak pedig vissza
+                            kell térniük ahhoz a bázishoz, ahonnan az ütés előtt indultak </td>
+                        <td>A levegőben való elkapás kesztyűvel és puszta kézzel is érvényes. Azonban ha a védő az
+                            elkapás után azonnal kiejti a kezéből a labdát, a kiejtés érvénytelen és a futók tovább
+                            futhatnak. Egy speciális eset az úgynevezett infield fly, amikor a levegőben magasan ütött
+                            labda az infielden belül maradva elkapás nélkül is outnak minősül.</td>
+                        <td class="out">FLYOUT</td>
+                    </tr>
+                </table>
+            </article>
+            <article class="stat">
+                <h1>Statisztika</h1><br>
+                <p>Ugyanúgy, mint a baseballban, a softballban is nagyon sok statisztikát vezetnek a játékosok
+                    teljesítményéről - a legmagasabb szinten a fizetésüket is ez alapján kapják. <br>
+                    Az egyik legfontosabb ilyen statisztikai mutató az ütőátlag (batting average, AVG), amely
+                    leegyszerűsítve azt mutatja meg, hogy a játékos az összes lehetőségéből hánynál ért el érvényes
+                    ütést. <br><br>
+                    "Ebben a szezonban <input type="text" id="atbat" name="ab" size="2" maxlength="2"> lehetőségem volt
+                    ütni, ebből <input type="text" name="h" id="hit" size="2" maxlength="2">-szer/-szor ütésem lett!"
+                    <input type="button" id="battingaverage" value="Jó ütő vagyok?" onclick="battingaverage()">
+                    <br><br><img src="Kepek/mvp.jpg" alt="Te vagy az MVP!" id="mvp" style="display: none;"> </p>
+            </article>
+        </div>
+        <aside class="doubleplay">
+            <h1>Érdekesség</h1> <br>
+            <p>Egy ütés során több outot is lehetséges szerezni, amikor kettőt, azt double playnek hívják és általában
+                két forceoutból, vagy egy flyoutból és egy forceoutból áll. <br>
+                Létezik triple play is, de az még a profi ligában is nagyon ritka.</p>
+        </aside>
+    </div>
+    <footer>Ez a weboldal a Budapesti Corvinus Egyetem "Informatika és IT architektúra alapjai" nevű kurzusára készült.
+        <br>Vigh Rebeka, 2024</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

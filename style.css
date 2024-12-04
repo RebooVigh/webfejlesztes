@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    flex-basis: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 1 1 100%;
+}
+
+header {
+    text-align: center;
+    text-shadow:
+        -1px -1px 0 red,
+        1px -1px 0 red,
+        -1px 1px 0 red,
+        1px 1px 0 red;
+    font-size: 40px;
+    font-weight: bold;
+    color: yellow;
+    background-color: #3fa34d;
+    font-family: "Bangers";
+    letter-spacing: 5px;
+}
+
+header h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    background-color: #3fa34d;
+    font-family: 'Roboto', sans-serif;
+}
+
+header hr {
+    margin: 0;
+}
+
+hr {
+    height: 5px;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+body {
+    background-color: #e37902
+}
+
+nav {
+    background-color: #3fa34d;
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+    background-color: #bfc540;
+    border: 2px solid #fbaf00;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a:hover {
+    background-color: bisque;
+    color: #e37902
+}
+
+a.active {
+    background-color: bisque;
+    color: #e37902
+}
+
+
+aside {
+    border: 2px solid black;
+    background-color: bisque;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px;
+    color: darkslategray;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+aside h1 {
+    text-align: center;
+    text-shadow:
+        -1px -1px 0 red,
+        1px -1px 0 red,
+        -1px 1px 0 red,
+        1px 1px 0 red;
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+    text-align: center;
+}
+
+article {
+    flex-wrap: wrap;
+    border: 2px solid black;
+    background-color: bisque;
+    color: darkslategray;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+article h1 {
+    text-align: center;
+}
+
+article.jelentkezes {
+    color: darkslategray;
+    text-align: center;
+}
+
+
+article.csapatok {
+    text-align: center;
+    margin-top: 0;
+}
+
+.ncaa {
+    margin-bottom: 30px;
+}
+
+td {
+    border: 4px dashed red;
+    background-color: yellow;
+    margin: 0;
+    padding: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+
+td.cimsor {
+    font-weight: bold;
+    text-align: center;
+    font-size: 120%;
+}
+
+td.out {
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    padding: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: darkslategray;
+}
+
+img.kep {
+    max-width: 75%;
+    max-height: 100%;
+    border-radius: 15px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+img.kep1 {
+    max-width: 50%;
+    border-radius: 15px;
+    margin-left: 25%;
+    margin-right: 25;
+}
+
+img.oklahoma {
+    border: 5px dotted gold;
+    height: 250px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+img.csapat {
+    display: inline-block;
+    border-radius: 15px;
+    width: 260px;
+    height: 250px;
+}
+
+figure {
+    display: inline-block;
+}
+
+form {
+    line-height: 30px;
+}
+
+article.stat{ margin: 30px;
+    width: 100%;}
+
+
+@media all and (min-width: 600px) {
+
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        list-style-type: none;
+    }
+
+    .welcome {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        max-width: 49%;
+        margin: 30px;
+    }
+
+    aside.erdekesseg {
+        margin: 30px;
+        margin-top: 120px;
+
+    }
+
+    .kulonbseg {
+        margin: 15px;
+
+    }
+
+    .szabalyok {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        margin: 30px;
+        max-height: fit-content;
+    }
+
+
+
+    article.jatek {
+        max-width: 75%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    }
+
+    aside.doubleplay {
+        margin: 30px;
+        width: 100%;
+    }
+
+    .csapatok {
+        flex: 1;
+        max-width: 100%;
+        margin: 30px;
+    }
+
+    article.jelentkezes {
+        max-width: 100%;
+        margin: 30px;
+    }
+
+
+    article.fotoalbum {
+        max-width: 100%;
+
+    }
+
+    img.icon {
+        max-width: 10%;
+        max-height: 10%;
+    }
+
+    img.kep1 {
+        text-align: center;
+        width: 50%;
+        height: 50%;
+        border-radius: 15px;
+        margin-left: 25%;
+    }
+
+    article.stat{ margin: 30px;
+        width: 100%;}
+    
+
+
+    @media all and (min-width: 768px) {
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            width: 25%;
+        }
+
+    }
+
+article.jatek{max-width: 75%;
+    margin-left: 30px;
+}
+
+article.stat {flex:1;
+    
+}
